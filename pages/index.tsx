@@ -45,8 +45,6 @@ export default function Home({
   const movie = useRecoilValue(movieState);
   const list = useList(user?.uid);
 
-  console.log(subscription)
-
   if (loading || subscription === null)
     return <div className="w-screen h-screen bg-[#141414]"></div>;
 

@@ -72,7 +72,6 @@ function Modal() {
       return onSnapshot(
         collection(db, "customers", user.uid, "myList"),
         (snapshot) => {
-          console.log('onSnapshot')
           setMovies(snapshot.docs.map(doc => ({...doc.data(), id: doc.id})))
         }
       );
